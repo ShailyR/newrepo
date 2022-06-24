@@ -1,0 +1,1 @@
+awk 'BEGIN{ }NR>1{quant+=$3;sum+=$3*$2} END{printf("%d\t$%.2f\n",quant,sum)} ' fruit_prices.txt > 3-b.txt

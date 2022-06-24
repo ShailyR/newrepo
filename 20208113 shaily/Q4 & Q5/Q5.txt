@@ -1,0 +1,32 @@
+awk -F : 'BEGIN {i=1} NR==$i 
+		{
+			if ( $1 == "B" )
+			{
+				balance+=$2
+			}
+			else if ( $1 == "D" )
+			{
+				balance+=$4
+				printf("%s\t%f\n",$2,balance)
+			}
+			else if ($1 == "C" )
+			{
+				if( balance>=$4 )
+				{
+					balance-=$5
+					printf("%s\t%f\n",$2,balance)
+				}
+
+				else
+				{
+					printf("Insufficient Balance")
+				}
+			}
+			else
+			{
+				balance-=$4
+				printf("%s\t%f\n",$2,balance)
+			}
+			i++
+		}
+		END {printf("Total\t\t%f\n",balance)} ' account.txt > 5.txt

@@ -1,0 +1,7 @@
+Quantity Price/lbs Fruit
+100 0.89 Banana
+312 0.79 Paech
+400 1.50 Kiwi
+84 1.29 Pineapple
+21 0.99 Apple
+52 2.20 Mango

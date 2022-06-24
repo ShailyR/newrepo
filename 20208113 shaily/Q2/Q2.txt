@@ -1,0 +1,23 @@
+awk 'BEGIN{
+sum=0.0
+credits=0.0}
+NR>1 {
+	if( $2 == "A" )
+	{
+		sum+=10*$3
+		credits+=$3
+	}
+	else if ( $2 == "B" )
+	{
+		sum+=9*$3
+		credits+=$3
+	}
+	else
+	{
+		sum+=8*$3
+		credits+=$3
+	}
+
+}END{ printf("GPA = %f",(sum/credits)) } ' data.txt > gpa.txt
+	
+		

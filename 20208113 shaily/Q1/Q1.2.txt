@@ -1,0 +1,2 @@
+awk '$2=="M" {print $0}' marks.txt > males.txt
+awk '$2=="F" {print $0}' marks.txt > females.txt

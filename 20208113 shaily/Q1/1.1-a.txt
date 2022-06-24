@@ -1,0 +1,6 @@
+AA M 35
+BB F 44
+CC F 25
+DD M 42
+EE F 30
+FF M 45
